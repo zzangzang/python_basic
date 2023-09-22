@@ -130,4 +130,65 @@ a=list(a)  # set타입을 list타입으로 바꿈
 print(a)   # list 타입으로 나오게됨
 
 a=list(set(a)) # set type으로 변환하고 (중복값 제거 위해)-> list type로 다시 변환
+a = list(set(a))
+print(a)
+print(type(a))
+
+# 4. 딕트(dict) ex: 복주머니
+# - 순서가 없음(인덱스 없음, 정렬 불가능)
+# - {key : value} 사용 -> key, value 1pair
+# - key는 중복 불가, value 중복 가능
+# - key를 통해서만 value에 접근 가능
+# - 멤버함수: update(), get(), keys(), values(), items()
+
+# 외부에서 데이터를 받아올 때 대부분 json 형식으로 전달
+#       -json == dict(동일)
+
+# {"id": "ccw1104", "pw": "abc1234!", "name": "최철웅"}
+
+dict_a = {"korea" : "seoul",
+          "canada": "ottawa",
+          "usa": "washington d.c"}
+print(dict_a)
+import pprint
+pprint.pprint(dict_a)
+
+# update() : dict와 dict 병합
+a = {"a": 1,
+     "b": 2}
+b = {"b": 3,
+     "c": 5}
+a.update(b)     # 병합시 중복key 있는 경우 입력값(b)이 우선
+print(a)
+
+# pop() : dict 원소를 key를 통해서 삭제
+c = a.pop("a")
+print(a)
+print(c)    # {"a" : 1}삭제 된 value(key X)
+
+# in() : ()안의 key값이 존재 확인
+print("c" in a)
+print("f" in a)
+
+# get() : 값 접근
+# list, tuple, dict 접근 -> 컬렉션[index or key] ex: a[2]
+#print(a["f"])      #key가 없으면 error 발생
+print(a.get("f"))   #key가 없으면 none 출력(error X) get쓰는 게 더 좋음
+
+#   keys(), values(), items()
+print(a.keys())         # key만 추출
+print(a.values())       # value만 추출
+print(a.items())        # (key, value) 추출
+
+print(list(a.keys()))   # 활용 방법
+
+# clear() : dict 초기화
+print(a)
+a.clear()
+print(a)
+
+e = {}
+print(type(e))
+## 딕트도 {} 셋도 {}인데 {a}
+
 
