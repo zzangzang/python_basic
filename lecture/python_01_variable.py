@@ -106,10 +106,10 @@ print(num) # 출력: 10
 # 동등연산자(==): equal
 
 # name 변수 생성
-# "jang jeong min" 값을 name 변수에 담기
+# "Jang jeong min" 값을 name 변수에 담기
 
-# name(변수명), =(대입연산자), "Ju Hye Rim" (값)
-name = "jang jeong min"
+# name(변수명), =(대입연산자), "Jang jeong min" (값)
+name = "Jang jeong min"
 
 
 # 명명규칙 (Naming Rule)
@@ -143,10 +143,10 @@ name = "jang jeong min"
 
 # 동적 출력 !
 student_num = 20233177
-student_name = "Ju Hye Rim"
+student_name = "jang jeong min"
 
-# 출력 예 : 조선대학교 20233177, Ju Hye Rim 입니다.
-print("조선대학교 20233177, Ju Hye Rim 입니다.")    # 하드 코딩 지양!
+# 출력 예 : 조선대학교 20233076, Jang jeong min 입니다.
+print("조선대학교 20233076, Jang jeong min 입니다.")    # 하드 코딩 지양!
 
 # 1. format()함수 - Old
 print("조선대학교 {}, {} 입니다.".format(student_num, student_name))
@@ -165,7 +165,6 @@ print(f"조선대학교 {student_num}, {student_name} 입니다.")
 #  5/2 : 나누기        2.5
 # 5//2 : 나누기(몫)     2
 #  5%2 : 나누기 (나머지) 1
-
 
 
 
